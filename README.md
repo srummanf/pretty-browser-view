@@ -43,6 +43,7 @@ This project is designed to replicate real-world windowing behavior in the brows
 * **NextJS**– Front-end UI logic and state management
 * **TailwindCSS** – Utility-first styling for layout, spacing, and theming
 * **HTML5 iframe API** – URL rendering in sandboxed, secure web containers
+* **v0, chatGPT** – AI Assistance
 
 ---
 
@@ -111,3 +112,27 @@ For guidelines on how to contribute to this project, please refer to the [Contri
 ## License
 
 This project is released under the [MIT License](./LICENSE.md).
+
+---
+
+# A Great way to promote projects in your README file by taking a screenshot of the rendered product in the browser
+
+---
+
+
+<table>
+  <tr>
+    <td align="left" width="50%">
+      <strong>Maintained by</strong><br />
+      Shaikh Rumman Fardeen<br />
+      <a href="https://github.com/srummanf">GitHub: @srummanf</a><br />
+      <a href="mailto:rummanfardeen4567@gmail.com">rummanfardeen4567@gmail.com</a>
+    </td>
+    <td align="right" width="50%">
+      <strong>Project Links</strong><br />
+      <a href="https://pretty-browser-view.vercel.app/">Live Demo</a><br />
+      <a href="https://github.com/srummanf/pretty-browser-view">Source Code</a><br />
+      <a href="./LICENSE">MIT License</a> | <a href="./CONTRIBUTING.md">Contributing</a>
+    </td>
+  </tr>
+</table>

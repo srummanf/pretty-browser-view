@@ -7,8 +7,8 @@ Click the **Fork** button on the top right of the [GitHub repository](https://gi
 ### 2. Clone Your Fork
 
 ```bash
-git clone https://github.com/srummanf/Interactive-Candle-Blow-Birthday-Cake.git
-cd Interactive-Candle-Blow-Birthday-Cake
+git clone https://github.com/srummanf/pretty-browser-view.git
+cd pretty-browser-view
 ```
 
 ### 3. Create a Branch
@@ -19,7 +19,7 @@ git checkout -b feature/your-feature-name
 
 ### 4. Make Your Changes
 
-Make improvements to the HTML, CSS, or JavaScript files as needed.
+Make improvements to the files as needed.
 
 ### 5. Commit and Push
 
@@ -47,10 +47,5 @@ git push origin feature/your-feature-name
 
 - Open an issue on the [Issue Tracker](https://github.com/srummanf/Interactive-Candle-Blow-Birthday-Cake/issues)
 - Include steps to reproduce the problem if reporting a bug.
-
-## Attribution
-
-- Cake design inspired by Fazlur Rahman's creation on CodePen.
-- Project enhanced using AI-assisted tools for scripting and interaction logic.
 
 Thank you for your contribution!
