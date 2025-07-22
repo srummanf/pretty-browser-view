@@ -26,13 +26,7 @@ This project is designed to replicate real-world windowing behavior in the brows
 4. **Fullscreen Toggle:**
    * Switch the floating window to full-screen mode and back.
    * Useful for immersive previews or testing responsive designs.
-5. **Glass Morphism UI:**
-   * Applies layered `box-shadow`, `rgba` coloring, and optional blur filters.
-   * Creates a realistic floating, glass-panel feel with light glow, shadows, and border accents.
-6. **Layered Shadows and Visual Depth:**
-   * Custom `box-shadow` stack adds elevation and realism.
-   * Shadow hierarchy enhances the separation between the window and desktop background.
-7. **Desktop-style Background:**
+5. **Desktop-style Background:**
    * Mimics an OS environment with a fixed background (solid color, gradient, or image).
    * Acts as the base canvas for all floating windows.
 
@@ -47,7 +41,7 @@ This project is designed to replicate real-world windowing behavior in the brows
 
 ---
 
-## **Installation Instructions:**
+## **Installation:**
 
 **Prerequisites:**
 
