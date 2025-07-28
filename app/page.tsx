@@ -18,7 +18,10 @@ import {
   Crosshair,
   Puzzle,
   Terminal,
-  Maximize2
+  Maximize2,
+  RefreshCw,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 interface WindowState {
@@ -32,8 +35,16 @@ interface WindowState {
 type ResizeDirection = "nw" | "ne" | "sw" | "se" | "n" | "s" | "e" | "w";
 
 export default function DesktopBrowser() {
-  const [url, setUrl] = useState("https://hkhub.vercel.app/");
-  const [currentUrl, setCurrentUrl] = useState("https://hkhub.vercel.app/");
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  const handleRefresh = () => {
+    if (iframeRef.current) {
+      // Reload the iframe by resetting the src
+      iframeRef.current.src = currentUrl;
+    }
+  };
+  const [url, setUrl] = useState("https://srummanf.vercel.app/");
+  const [currentUrl, setCurrentUrl] = useState("https://srummanf.vercel.app/");
   const [windowState, setWindowState] = useState<WindowState>({
     x: 100,
     y: 100,
@@ -231,8 +242,7 @@ export default function DesktopBrowser() {
   0 8px 16px rgba(0, 0, 0, 0.4),    /* secondary soft bottom */
   0 0 0 10px rgba(135, 206, 235, 0.3),
   0 0 0 11.5px rgba(0, 0, 0, 0.8)
-`
-,
+`,
         }}
       >
         {/* Glass Top Bar */}
@@ -251,12 +261,35 @@ export default function DesktopBrowser() {
             backdropFilter: "blur(25px)",
             borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
             borderRadius: "6px 6px 0 0",
-            boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.2)",
+            boxShadow:
+              "inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.2)",
           }}
         >
           {/* Left side - Info icon and URL */}
           <div className="flex items-center space-x-3 flex-1">
-            <Info className="h-4 w-4 text-white/70" />
+            <Button
+              variant="ghost"
+              size="sm"
+              className="h-6 w-6 p-0 text-white/70 hover:text-white hover:bg-white/10"
+            >
+              <ChevronLeft className="h-6 w-6 text-white/70" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="h-6 w-6 p-0 text-white/70 hover:text-white hover:bg-white/10"
+            >
+              <ChevronRight className="h-6 w-6 text-white/70" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="h-6 w-6 p-0 text-white/70 hover:text-white hover:bg-white/10"
+              onClick={handleRefresh}
+            >
+              <RefreshCw className="h-6 w-6" />
+            </Button>
+            <Info className="h-5 w-5 text-white/70" />
             <Input
               type="text"
               value={url}
@@ -267,13 +300,14 @@ export default function DesktopBrowser() {
               style={{
                 backdropFilter: "blur(10px)",
                 minWidth: "200px",
-                maxWidth: "400px",
+                maxWidth: "590px",
               }}
             />
           </div>
 
           {/* Right side - Controls */}
           <div className="flex items-center space-x-2">
+          
             <Button
               variant="ghost"
               size="sm"
@@ -336,6 +370,7 @@ export default function DesktopBrowser() {
         {/* Content Area */}
         <div className="flex-1 relative overflow-hidden">
           <iframe
+            ref={iframeRef}
             src={currentUrl}
             className="w-full h-full border-0"
             title="Browser Content"
